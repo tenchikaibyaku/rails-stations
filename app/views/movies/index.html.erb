@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies</title>
+</head>
+<body>
+  <h1>映画一覧</h1>
+  <ul>
+    <% @movies.each do |movie| %>
+      <li>
+        <h2><%= movie.name %></h2>
+        <img src="<%= movie.image_url %>" alt="<%= movie.name %>" width="200">
+      </li>
+    <% end %>
+  </ul>
+</body>
+</html>
