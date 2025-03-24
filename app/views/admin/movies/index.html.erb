@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Movies</title>
+  </head>
+  <body>
+    <h1>Movies List (Admin)</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Year</th>
+          <th>Description</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @movies.each do |movie| %>
+          <tr>
+            <td><%= movie.name %></td>
+            <td><%= movie.year %></td>
+            <td><%= movie.description %></td>
+            <td><img src="<%= movie.image_url %>" alt="<%= movie.name %>" width="100"></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </body>
+</html>

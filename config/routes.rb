@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resources :movies, only: [:index]  # /movies へのGETリクエストを許可
+  namespace :admin do
+    resources :movies, only: [:index]
+  end
+
+  # 他のルートもここに書く
 end
