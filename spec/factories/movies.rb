@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :movie do
-    name { "映画タイトル" }
+    sequence(:name) { |n| "タイトル#{n}" }  # ← ここがポイント
     year { 2024 }
-    description { "これは説明です。" }
-    image_url { "https://example.com/sample.jpg" }
+    description { "テスト用説明文" }
+    image_url { "https://example.com/image.jpg" }
     is_showing { true }
   end
 end

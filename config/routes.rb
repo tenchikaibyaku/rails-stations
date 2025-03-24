@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :movies, only: [:index]
+    resources :movies, only: [:index, :new, :create]
   end
-
-  # 他のルートもここに書く
 end
