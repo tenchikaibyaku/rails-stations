@@ -6,6 +6,18 @@
 </head>
 <body>
   <h1>映画一覧</h1>
+
+  <!-- 検索フォーム（GETメソッド） -->
+  <form action="/movies" method="get">
+    <input type="text" name="keyword" placeholder="タイトル検索">
+    
+    <!-- 公開中 or 公開前の切り替え -->
+    <label><input type="radio" name="is_showing" value="true"> 公開中</label>
+    <label><input type="radio" name="is_showing" value="false"> 公開前</label>
+    
+    <input type="submit" value="検索">
+  </form>
+
   <ul>
     <% @movies.each do |movie| %>
       <li>
